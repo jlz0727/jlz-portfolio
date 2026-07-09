@@ -525,6 +525,7 @@ ul { list-style: none; }
 /* Contact chip row — give breathing room above the scheduling buttons */
 .contact .contact-chips { margin-bottom: 40px; justify-content: center; margin-top: 28px; }
 .contact .cta-row { margin-top: 12px; }
+.contact .cta-row .btn { flex: 0 0 220px; white-space: nowrap; justify-content: center; }
 
 .footer-copyright {
   text-align: center;   padding: 8px 20px 40px;
@@ -736,10 +737,6 @@ ul { list-style: none; }
   transition: color .7s var(--ease-out-soft);
 }
 
-.assistant-welcome-commands {
-  display: flex; flex-wrap: wrap; gap: 6px;
-}
-
 /* ─── Quick cmds ─── */
 .quick-cmd {
   font-family: var(--f-mono);
@@ -747,15 +744,17 @@ ul { list-style: none; }
   color: var(--ink-dim);
   border: 1px solid var(--line);
   border-radius: 6px;
-  padding: 6px 14px;
+  padding: 6px 10px;
   background: var(--bg);
   cursor: pointer;
-  white-space: nowrap;
+  white-space: nowrap !important;
+  overflow: hidden;
   transition: all .2s var(--ease);
   text-align: center;
-  flex: 1 1 auto;
-  min-width: 110px;
+  box-sizing: border-box;
 }
+.assistant-welcome-commands { display: flex; flex-wrap: wrap; gap: 6px; }
+.assistant-welcome-commands .quick-cmd { flex: 1 1 0; min-width: 210px; }
 .quick-cmd:hover {
   background: var(--accent-bg);
   border-color: var(--accent);
