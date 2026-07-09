@@ -527,7 +527,7 @@ ul { list-style: none; }
 .contact .cta-row { margin-top: 12px; }
 
 .footer-copyright {
-  text-align: center;   padding: 100px 20px 0;
+  text-align: center;   padding: 8px 20px 40px;
   color: var(--fog); font-size: 11px; letter-spacing: 0.03em;
   font-family: 'SFMono','Cascadia Code','Fira Code','Consolas',monospace;
   opacity: 0.45;
