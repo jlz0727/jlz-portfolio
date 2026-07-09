@@ -580,6 +580,10 @@ var Chatbot = (function () {
     /* ---------- Global keystroke capture — type immediately without clicking ---------- */
     document.addEventListener('keydown', function (e) {
       if (document.activeElement === input) return;
+      var tag = document.activeElement && document.activeElement.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || tag === 'BUTTON') return;
+      var modal = document.getElementById('modal');
+      if (modal && modal.classList.contains('open')) return;
       if (e.ctrlKey || e.altKey || e.metaKey) return;
       if (e.key === 'Tab' || e.key.startsWith('F')) return;
       input.focus();
