@@ -5,28 +5,6 @@
 (function () {
   'use strict';
 
-  /* ---------- Desktop Site mode on mobile — scale page to fit viewport ---------- */
-  (function () {
-    var wrap = document.getElementById('page-wrap');
-    if (!wrap) return;
-    var DESKTOP_W = 1080;
-    function fitScreen() {
-      var vw = window.innerWidth;
-      if (vw < DESKTOP_W) {
-        var scale = vw / DESKTOP_W;
-        wrap.style.transformOrigin = 'top left';
-        wrap.style.transform = 'scale(' + scale + ')';
-        wrap.style.width = DESKTOP_W + 'px';
-      } else {
-        wrap.style.transform = '';
-        wrap.style.width = '';
-        wrap.style.transformOrigin = '';
-      }
-    }
-    fitScreen();
-    window.addEventListener('resize', fitScreen);
-  })();
-
   /* ---------- Scroll to top on refresh ---------- */
   window.scrollTo(0, 0);
 
