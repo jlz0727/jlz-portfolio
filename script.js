@@ -388,15 +388,17 @@
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
     }
-    if (window.innerWidth < 768 && window.DeviceOrientationEvent) {
-      if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-        DeviceOrientationEvent.requestPermission().then(function (state) {
-          if (state === 'granted') window.addEventListener('deviceorientation', handleGyro);
-        });
-      } else {
-        window.addEventListener('deviceorientation', handleGyro);
+    try {
+      if (window.DeviceOrientationEvent) {
+        if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+          DeviceOrientationEvent.requestPermission().then(function (state) {
+            if (state === 'granted') window.addEventListener('deviceorientation', handleGyro);
+          }).catch(function () {});
+        } else {
+          window.addEventListener('deviceorientation', handleGyro);
+        }
       }
-    }
+    } catch (e) {}
     modal.addEventListener('mousemove', tiltCard);
     modal.addEventListener('mouseleave', resetCardTilt);
     document.body.style.overflow = 'hidden';
