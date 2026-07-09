@@ -340,8 +340,8 @@
     var rect = card.getBoundingClientRect();
     var x = (e.clientX - rect.left) / rect.width;
     var y = (e.clientY - rect.top) / rect.height;
-    targetTiltX = (y - 0.5) * -12;
-    targetTiltY = (x - 0.5) * 12;
+    targetTiltX = (y - 0.5) * -2;
+    targetTiltY = (x - 0.5) * 2;
     if (!tiltRaf) tiltRaf = requestAnimationFrame(applyTilt);
   }
   function resetCardTilt() {
@@ -356,8 +356,8 @@
     if (beta === null || gamma === null) return;
     var normBeta = Math.max(-45, Math.min(45, beta));
     var normGamma = Math.max(-45, Math.min(45, gamma));
-    targetTiltX = (normBeta / 45) * -10;
-    targetTiltY = (normGamma / 45) * 10;
+    targetTiltX = (normBeta / 45) * -1.5;
+    targetTiltY = (normGamma / 45) * 1.5;
     if (!tiltRaf) tiltRaf = requestAnimationFrame(applyTilt);
     gyroActive = true;
   }
