@@ -752,7 +752,9 @@ ul { list-style: none; }
   cursor: pointer;
   white-space: nowrap;
   transition: all .2s var(--ease);
-  text-align: left;
+  text-align: center;
+  flex: 1 1 auto;
+  min-width: 110px;
 }
 .quick-cmd:hover {
   background: var(--accent-bg);
