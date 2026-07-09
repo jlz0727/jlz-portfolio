@@ -285,7 +285,7 @@ ul { list-style: none; }
   background: var(--card); border: 1px solid var(--line); border-radius: 10px;
   padding: 10px 11px; color: var(--ink-dim);
   overflow: hidden;
-  width: 40px;
+  width: 40px; height: 40px;
   cursor: pointer;
   will-change: width;
   transform: translateZ(0);
@@ -325,7 +325,7 @@ ul { list-style: none; }
   user-select: all;
 }
 .info-chip.open {
-  width: auto;
+  width: auto; height: auto;
   padding: 10px 18px;
   border-color: var(--accent);
   box-shadow: 0 6px 22px rgba(37,99,235,0.12);
