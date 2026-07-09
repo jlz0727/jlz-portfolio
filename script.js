@@ -78,7 +78,7 @@
 
       var translateY = (1 - ep) * 50;
       var opacity    = ep;
-      var blur       = (1 - ep) * 6;
+      var blur       = (1 - ep) * 1.5;
       var scale      = 1 - (1 - ep) * 0.06;
 
       el.style.transform = 'translateY(' + translateY + 'px) scale(' + scale + ') translateZ(0)';
