@@ -1,0 +1,18 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node (if you add tooling later)
+node_modules/
+npm-debug.log*
+
+# Env / secrets
+.env
+.env.local
+*.local
+
+# Build output (none currently, reserved)
+dist/
+build/

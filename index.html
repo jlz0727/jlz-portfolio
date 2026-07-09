@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Lord G. Zambrano — Computer Engineer</title>
+  <meta name="description" content="Portfolio of John Lord G. Zambrano — Computer Engineering student passionate about Cybersecurity, AI, and Software Development." />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- ============ LOADER — full-screen splash that fades out ============ -->
+  <div id="loader">
+    <img class="loader-logo" src="assets/JLZ-WHITELOGO.png" alt="JLZ" />
+  </div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="brand" aria-label="Home">
+        <img class="brand-logo" src="assets/JLZ-WHITELOGO.png" alt="JLZ" />
+        <span class="brand-text">John Lord G. Zambrano</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#interests" class="nav-link">Tech Skills</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#assistant" class="nav-link">Assistant</a>
+        <div class="toggle-switch">
+          <label class="switch-label" aria-label="Toggle theme">
+            <input type="checkbox" id="themeToggle" class="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <a href="assets/john-lord-zambrano-resume.pdf" download="Zambrano_Resume.pdf" class="nav-cta">Download CV</a>
+      </nav>
+      <div class="nav-right-mobile">
+        <div class="toggle-switch toggle-mini">
+          <label class="switch-label" aria-label="Toggle theme">
+            <input type="checkbox" class="checkbox theme-toggle-mobile" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="container hero-layout">
+        <div class="hero-text">
+          <h1 class="hero-name reveal">
+            <span class="typing-line">
+              <span class="typing-text" id="typingText"></span><span class="typing-cursor" id="typingCursor">|</span>
+            </span>
+          </h1>
+          <p class="hero-subtitle mono reveal">Computer Engineering Student</p>
+          <!-- Info chips under the name (smooth glide-sideward on click) -->
+          <div class="info-chips-row reveal">
+            <button class="info-chip" data-reveal="email" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+              <span class="chip-content">
+                <span class="chip-label">Email</span>
+                <span class="chip-value mono">jlgzambrano27@gmail.com</span>
+              </span>
+            </button>
+            <button class="info-chip" data-reveal="phone" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span class="chip-content">
+                <span class="chip-label">Phone</span>
+                <span class="chip-value mono">+63 968 367 3765</span>
+              </span>
+            </button>
+            <button class="info-chip" data-reveal="location" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="chip-content">
+                <span class="chip-label">Location</span>
+                <span class="chip-value mono">Bagong Barrio, Caloocan City</span>
+              </span>
+            </button>
+            <a class="info-chip-link" href="https://linkedin.com/in/john-lord-zambrano" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a class="info-chip-link" href="https://github.com/jlz0727" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.8 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 24 12.5C24 5.9 18.6.5 12 .5z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <img src="assets/profile.jpg" alt="John Lord G. Zambrano" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-label mono reveal">[ About ]</div>
+        <div class="about-grid">
+          <div class="about-lead reveal">
+            <h2 class="about-heading">Driven by curiosity, Focused on growth.</h2>
+          </div>
+          <div class="about-body reveal">
+            <p class="lede">
+              I am a Computer Engineering student passionate about Cybersecurity, with a growing
+              interest in Artificial Intelligence and Web-based Development. I enjoy learning how
+              technology can be built, analyzed, and secured while understanding how AI can
+              contribute to smarter and more efficient solutions. Through hands-on projects and
+              continuous improvement, I continue to develop my technical skills and gain experience
+              in creating innovative and secured applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECH SKILLS (Cybersecurity first, real brand colors/logos) ============ -->
+    <section class="section section-alt" id="interests">
+      <div class="container">
+        <div class="section-label mono reveal">[ Tech Skills ]</div>
+        <h2 class="block-heading reveal">Core Competencies</h2>
+        <p class="block-note reveal">Technologies and skills I work with:</p>
+
+        <div class="interest-grid reveal-stagger">
+          <div class="interest-card">
+            <div class="interest-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="11" r="4.5" fill="#1BA0D7" opacity="0.08"/><circle cx="12" cy="11" r="3" fill="#1BA0D7" opacity="0.14"/><path d="M12 4L6 7.5v5c0 4 2.5 7.5 6 8.5 3.5-1 6-4.5 6-8.5v-5L12 4z" fill="#1BA0D7"/><polyline points="9.5 12 11.5 14 14.5 10" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="interest-name">Cybersecurity</div>
+            <div class="interest-desc">Network defense, threat analysis, incident response, and security principles through hands-on labs and certifications.</div>
+          </div>
+          <div class="interest-card">
+            <div class="interest-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="11" r="4.5" fill="#FF6F00" opacity="0.08"/><circle cx="12" cy="11" r="3" fill="#FF6F00" opacity="0.14"/><polygon points="12,5.8 16.6,8.4 16.6,13.6 12,16.2 7.4,13.6 7.4,8.4" fill="#FF6F00" opacity="0.2"/><polygon points="12,7.2 15.2,9.2 15.2,12.8 12,14.8 8.8,12.8 8.8,9.2" fill="#FF6F00" opacity="0.35"/><circle cx="12" cy="11" r="2" fill="#FF6F00"/><circle cx="12" cy="11" r="0.8" fill="#FFB84D" opacity="0.6"/><circle cx="12" cy="2.2" r="1.4" fill="#FF6F00" opacity="0.7"/><circle cx="21.5" cy="7.5" r="1.4" fill="#FF6F00" opacity="0.7"/><circle cx="21.5" cy="16.5" r="1.4" fill="#FF6F00" opacity="0.7"/><circle cx="12" cy="21.8" r="1.4" fill="#FF6F00" opacity="0.7"/><circle cx="2.5" cy="16.5" r="1.4" fill="#FF6F00" opacity="0.7"/><circle cx="2.5" cy="7.5" r="1.4" fill="#FF6F00" opacity="0.7"/><path d="M12 3.6L12 9" stroke="#FF6F00" stroke-width="1" stroke-linecap="round" opacity="0.45"/><path d="M20.4 8.5L14.5 10.5" stroke="#FF6F00" stroke-width="1" stroke-linecap="round" opacity="0.45"/><path d="M20.4 15.5L14.5 13.5" stroke="#FF6F00" stroke-width="1" stroke-linecap="round" opacity="0.45"/><path d="M12 20.4L12 13" stroke="#FF6F00" stroke-width="1" stroke-linecap="round" opacity="0.45"/><path d="M3.6 15.5L9.5 13.5" stroke="#FF6F00" stroke-width="1" stroke-linecap="round" opacity="0.45"/><path d="M3.6 8.5L9.5 10.5" stroke="#FF6F00" stroke-width="1" stroke-linecap="round" opacity="0.45"/></svg></div>
+            <div class="interest-name">AI &amp; Automation</div>
+            <div class="interest-desc">Integrating AI chatbots, workflow automation, and AI-assisted development into real-world applications.</div>
+          </div>
+          <div class="interest-card">
+            <div class="interest-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="11" r="4.5" fill="#F7DF1E" opacity="0.08"/><circle cx="12" cy="11" r="3" fill="#F7DF1E" opacity="0.14"/><polyline points="10 7 6 12 10 17" stroke="#F7DF1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="14 7 18 12 14 17" stroke="#F7DF1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="interest-name">Web Development</div>
+            <div class="interest-desc">Building responsive, interactive frontends and scalable backend services with JavaScript, HTML, CSS, and Node.js.</div>
+          </div>
+        </div>
+
+        <div class="skill-grid reveal">
+          <div class="skill-cell"><span class="tech-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Javascript-shield.svg" alt="JavaScript" /></span><span>JavaScript</span></div>
+          <div class="skill-cell"><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /></span><span>HTML5</span></div>
+          <div class="skill-cell"><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /></span><span>CSS3</span></div>
+          <div class="skill-cell"><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" /></span><span>Node.js</span></div>
+          <div class="skill-cell"><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></span><span>MongoDB</span></div>
+          <div class="skill-cell"><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" /></span><span>C#</span></div>
+          <div class="skill-cell"><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" /></span><span>Arduino</span></div>
+          <div class="skill-cell"><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /></span><span>Git</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS (latest first, real logos) ============ -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-label mono reveal">[ Certifications ]</div>
+        <h2 class="block-heading reveal">Credentials &amp; Training</h2>
+
+        <div class="cert-timeline reveal">
+          <!-- July 2026 (latest) -->
+          <div class="cert-date-marker">July 2026</div>
+          <div class="cert-group">
+            <div class="cert-card" data-cert-images='["assets/certificates/cisco-sec-ops-defense.png"]'>
+              <div class="cert-logo-wrap"><img class="cert-logo" src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco" onerror="this.replaceWith(document.createTextNode('Cisco'))"/></div>
+              <div class="cert-text">
+                <div class="cert-name">Cisco — Security Operations and Defense Analyst <span class="live-dot"></span></div>
+                <div class="cert-meta">Cisco Networking Academy · July 2026</div>
+              </div>
+              <div class="cert-view">View</div>
+            </div>
+            <div class="cert-card" data-cert-images='["assets/certificates/cisco-network-defense.png","assets/certificates/cisco-network-defense-badge.png"]'>
+              <div class="cert-logo-wrap"><img class="cert-logo" src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco" onerror="this.replaceWith(document.createTextNode('Cisco'))"/></div>
+              <div class="cert-text">
+                <div class="cert-name">Cisco — Network Defense</div>
+                <div class="cert-meta">Cisco Networking Academy · July 2026</div>
+              </div>
+              <div class="cert-view">View</div>
+            </div>
+          </div>
+
+          <!-- June 2026 -->
+          <div class="cert-date-marker">June 2026</div>
+          <div class="cert-group">
+            <div class="cert-card" data-cert-images='["assets/certificates/cisco-network-support.png","assets/certificates/cisco-network-support-badge.png"]'>
+              <div class="cert-logo-wrap"><img class="cert-logo" src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco" onerror="this.replaceWith(document.createTextNode('Cisco'))"/></div>
+              <div class="cert-text">
+                <div class="cert-name">Cisco — Network Support &amp; Security</div>
+                <div class="cert-meta">Cisco Networking Academy · June 2026</div>
+              </div>
+              <div class="cert-view">View</div>
+            </div>
+            <div class="cert-card" data-cert-images='["assets/certificates/cisco-intro-cyber.png","assets/certificates/cisco-intro-cyber-badge.png"]'>
+              <div class="cert-logo-wrap"><img class="cert-logo" src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco" onerror="this.replaceWith(document.createTextNode('Cisco'))"/></div>
+              <div class="cert-text">
+                <div class="cert-name">Cisco — Introduction to Cybersecurity</div>
+                <div class="cert-meta">Cisco Networking Academy · June 2026</div>
+              </div>
+              <div class="cert-view">View</div>
+            </div>
+          </div>
+
+          <!-- April - May 2026 -->
+          <div class="cert-date-marker">April – May 2026</div>
+          <div class="cert-group">
+            <div class="cert-card" data-cert-images='["assets/certificates/isc2-cc.png"]'>
+              <div class="cert-logo-wrap"><span class="cert-logo-text">ISC2</span></div>
+              <div class="cert-text">
+                <div class="cert-name">ISC2 — Certified in Cybersecurity (CC)</div>
+                <div class="cert-meta">ISC2 · April – May 2026</div>
+              </div>
+              <div class="cert-view">View</div>
+            </div>
+          </div>
+
+          <!-- March 2026 -->
+          <div class="cert-date-marker">March 2026</div>
+          <div class="cert-group">
+            <div class="cert-card" data-cert-images='["assets/certificates/stellar-blockchain.png"]'>
+              <div class="cert-logo-wrap"><img class="cert-logo" src="https://cdn.simpleicons.org/stellar/7D00FF" alt="Stellar" onerror="this.replaceWith(document.createTextNode('Stellar'))"/></div>
+              <div class="cert-text">
+                <div class="cert-name">Stellar UniTour Bootcamp — Blockchain</div>
+                <div class="cert-meta">Stellar · March 2026</div>
+              </div>
+              <div class="cert-view">View</div>
+            </div>
+            <div class="cert-card" data-cert-images='["assets/certificates/htb-cyber-fundamentals.png","assets/certificates/htb-cyber-fundamentals-2.png"]'>
+              <div class="cert-logo-wrap"><img class="cert-logo" src="https://cdn.simpleicons.org/hackthebox/9FEF00" alt="HTB" onerror="this.replaceWith(document.createTextNode('HTB'))"/></div>
+              <div class="cert-text">
+                <div class="cert-name">Hack The Box — Cybersecurity Fundamentals</div>
+                <div class="cert-meta">Hack The Box · March 2026</div>
+              </div>
+              <div class="cert-view">View</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS (real brand colors) ============ -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-label mono reveal">[ Projects ]</div>
+        <h2 class="block-heading reveal">Personal Projects</h2>
+        <p class="block-note reveal">Real-world applications I have built.</p>
+
+        <div class="project-list reveal">
+          <div class="project-card" data-preview="https://otokwikk.vercel.app/">
+            <div class="project-top">
+              <span class="project-num">01</span>
+              <span class="project-year">2026</span>
+            </div>
+            <div class="project-name">Otokwikk</div>
+            <div class="project-role">Full-Stack Carwash Management System</div>
+            <p class="project-desc">
+              A comprehensive carwash management platform with AI chatbot integration.
+              Features booking/scheduling, customer management, service bundles, staff coordination,
+              analytics dashboard, and email notifications. Built as a complete full-stack application.
+            </p>
+            <ul class="project-tech">
+              <li><span class="tech-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Javascript-shield.svg" alt="JavaScript" /></span> JavaScript</li>
+              <li><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" /></span> HTML</li>
+              <li><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" /></span> CSS</li>
+              <li><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" /></span> Node.js</li>
+              <li><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></span> MongoDB</li>
+              <li><span class="pill">AI Chatbot</span></li>
+            </ul>
+            <div class="preview-row">
+              <span class="preview-badge">&#9654; Live Preview</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-num">02</span>
+              <span class="project-year">2025</span>
+            </div>
+            <div class="project-name">CivicLens</div>
+            <div class="project-role">AI-Powered Fact-Checking System</div>
+            <p class="project-desc">
+              A C# desktop application that leverages AI to verify the accuracy of claims and statements.
+              Built using Object-Oriented Programming principles with a clean architecture focused
+              on data verification and analysis.
+            </p>
+            <ul class="project-tech">
+              <li><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" /></span> C#</li>
+              <li><span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core" /></span> .NET Core</li>
+              <li><span class="pill">AI Integration</span></li>
+              <li><span class="pill">OOP</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-label mono reveal">[ Contact ]</div>
+        <div class="contact-inner reveal">
+          <h2 class="contact-headline">Open to opportunities, internships, and entry-level roles.</h2>
+          <!-- Same glide-sideward chip UI as the hero -->
+          <div class="info-chips-row reveal contact-chips">
+            <button class="info-chip" data-reveal="email" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+              <span class="chip-content">
+                <span class="chip-label">Email</span>
+                <span class="chip-value mono">jlgzambrano27@gmail.com</span>
+              </span>
+            </button>
+            <button class="info-chip" data-reveal="phone" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span class="chip-content">
+                <span class="chip-label">Phone</span>
+                <span class="chip-value mono">+63 968 367 3765</span>
+              </span>
+            </button>
+            <button class="info-chip" data-reveal="location" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="chip-content">
+                <span class="chip-label">Location</span>
+                <span class="chip-value mono">Bagong Barrio, Caloocan City</span>
+              </span>
+            </button>
+            <a class="info-chip-link" href="https://linkedin.com/in/john-lord-zambrano" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a class="info-chip-link" href="https://github.com/jlz0727" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.8 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 24 12.5C24 5.9 18.6.5 12 .5z"/></svg>
+            </a>
+          </div>
+          <div class="cta-row center">
+            <button class="btn btn-outline" data-modal="meeting">Schedule a Meeting</button>
+            <button class="btn btn-outline" data-modal="interview">Schedule an Interview</button>
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ============ AI PORTFOLIO ASSISTANT ============ -->
+    <section class="section" id="assistant">
+      <div class="container">
+        <div class="section-label reveal">[ AI Portfolio Assistant ]</div>
+        <div class="assistant-intro reveal">
+          <h2 class="block-heading">Still have questions?</h2>
+        </div>
+
+        <div class="assistant-app reveal" id="assistantApp">
+          <!-- Terminal title bar -->
+          <div class="assistant-header">
+            <div class="assistant-controls">
+              <span class="ctrl-dot"></span>
+              <span class="ctrl-dot"></span>
+              <span class="ctrl-dot"></span>
+            </div>
+            <span class="assistant-header-title">jlz@portfolio:~</span>
+          </div>
+
+          <!-- Welcome state -->
+          <div class="assistant-welcome" id="assistantWelcome">
+            <div class="assistant-welcome-greeting"><span class="prompt-user">guest</span><span class="prompt-at">@</span><span class="prompt-host">portfolio</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-dolar">$</span> <span class="cmd-name">./assistant</span></div>
+            <div class="assistant-welcome-body">Hi. I'm your AI Portfolio Assistant. Ask me about John's:</div>
+            <div class="assistant-welcome-commands">
+              <button class="quick-cmd" data-ask="View Projects"><span class="cmd-prefix">&gt;</span> View Projects</button>
+              <button class="quick-cmd" data-ask="Technical Skills"><span class="cmd-prefix">&gt;</span> Technical Skills</button>
+              <button class="quick-cmd" data-ask="Certifications"><span class="cmd-prefix">&gt;</span> Certifications</button>
+              <button class="quick-cmd" data-ask="Experience"><span class="cmd-prefix">&gt;</span> Experience</button>
+              <button class="quick-cmd" data-ask="Education"><span class="cmd-prefix">&gt;</span> Education</button>
+              <button class="quick-cmd" data-ask="Download Resume"><span class="cmd-prefix">&gt;</span> Resume</button>
+              <button class="quick-cmd" data-ask="Schedule Meeting"><span class="cmd-prefix">&gt;</span> Schedule Meeting</button>
+              <button class="quick-cmd" data-ask="Schedule Interview"><span class="cmd-prefix">&gt;</span> Schedule Interview</button>
+              <button class="quick-cmd" data-ask="Contact Information"><span class="cmd-prefix">&gt;</span> Contact</button>
+            </div>
+          </div>
+
+          <!-- Messages area -->
+          <div class="assistant-messages" id="chatMessages"></div>
+
+          <!-- Quick commands (shown after conversation) -->
+          <div class="chat-quick" id="chatQuick"></div>
+
+          <!-- Input -->
+          <div class="assistant-input-row">
+            <form class="assistant-form" id="chatForm">
+              <span class="input-prompt"><span class="prompt-user">guest</span><span class="prompt-at">@</span><span class="prompt-host">portfolio</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-dolar">$</span></span>
+              <span class="input-display" id="inputDisplay">
+                <span class="input-text" id="inputText"></span>
+                <span class="term-cursor" id="termCursor"></span>
+              </span>
+              <input class="assistant-input" id="chatInput" type="text" autocomplete="off" autofocus />
+              <button class="assistant-send" type="submit" aria-label="Send"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-copyright">&copy; 2026 John Lord G. Zambrano. All rights reserved.</div>
+  </main>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-nav" id="lightboxPrev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+    <div class="lightbox-frame">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Certificate" />
+      <div class="lightbox-dots" id="lightboxDots"></div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- ============ MODAL ============ -->
+  <div class="modal-overlay" id="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <h3 class="modal-title" id="modalTitle">Schedule a Meeting</h3>
+      <p class="modal-sub" id="modalSub">Tell me when works for you.</p>
+      <form id="scheduleForm">
+        <div class="field-row">
+          <div class="field"><label class="field-label" for="fName">Name</label><input type="text" id="fName" name="name" required placeholder="Your name" /></div>
+          <div class="field"><label class="field-label" for="fEmail">Email</label><input type="email" id="fEmail" name="email" required placeholder="you@example.com" /></div>
+        </div>
+        <div class="field"><label class="field-label" for="fDate">Preferred Date</label><input type="date" id="fDate" name="date" required /></div>
+        <div class="field"><label class="field-label" for="fMsg" id="msgLabel">Message</label><textarea id="fMsg" name="message" rows="3" placeholder="Anything you would like to share?"></textarea></div>
+        <button type="submit" class="btn btn-solid btn-full" id="modalSubmit">Send Request</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ PROJECT PREVIEW ============ -->
+  <div class="preview-overlay" id="previewOverlay" aria-hidden="true">
+    <button class="preview-close" id="previewClose" aria-label="Close">&times;</button>
+    <div class="preview-frame" id="previewFrame">
+      <div class="preview-loader" id="previewLoader">
+        <div class="preview-spinner"></div>
+        <span class="preview-loader-text mono">Loading preview...</span>
+      </div>
+      <iframe class="preview-iframe" id="previewIframe" src="" title="Project Preview" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <!-- ============ CHATBOT (hidden — kept for JS binding compatibility) ============ -->
+  <div class="chat-fab" id="chatFab" aria-label="Open chat" style="display:none"></div>
+  <div class="chat-panel" id="chatPanel" aria-hidden="true" style="display:none">
+    <div class="chat-header"><div class="chat-title"><span class="blink-dot"></span> John's AI Chatbot Assistant</div><button class="chat-close" id="chatClose" aria-label="Close">&times;</button></div>
+    <div class="chat-messages" id="chatMessagesClone" style="display:none"></div>
+    <div class="chat-quick" id="chatQuickClone" style="display:none"></div>
+    <div class="chat-input-row" style="display:none">
+      <form id="chatFormClone" style="display:flex;gap:8px;width:100%">
+        <input type="text" id="chatInputClone" placeholder="Ask about John Lord..." autocomplete="off" />
+        <button type="submit" class="chat-send" aria-label="Send"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m2 21 21-9L2 3v7l15 2-15 2z"/></svg></button>
+      </form>
+    </div>
+  </div>
+
+  <script src="emailjs-handler.js"></script>
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
